@@ -18,11 +18,11 @@ jobs:
         # The name of the image you would like to push
         name: file_handler
         # The login username for the registry
-        username: thiernodiallo88
+        username: thiernodiallo58
         # The login password for the registry
         password: MaRiamabalike88
         # Use registry for pushing to a custom registry
-        registry: https://hub.docker.com
+        registry: https://hub.docker.com/repository/docker/thiernodiallo88/mousto_test
         # Use snapshot to push an additional image
         # Use dockerfile when you would like to explicitly build a Dockerfile
         dockerfile: Documents/drop_dilitrust/file_hanlder/dockerfile
