@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-alpine
 # copy application WAR (with libraries inside)
-COPY target/file_hanlder-0.0.1-SNAPSHOT.jar /file_hanlder.jar
-COPY config.yml /config.yml
+COPY Documents/drop_dilitrust/file_hanlder/target/file_hanlder-0.0.1-SNAPSHOT.jar /file_hanlder.jar
+COPY config.yml Documents/drop_dilitrust/file_hanlder/config.yml
 RUN mkdir uploaded
 # specify default command
 CMD ["/usr/bin/java", "-jar", "file_hanlder.jar", "server config.yml"]
