@@ -1,0 +1,43 @@
+<html>
+<body>
+<script type="text/javascript">
+
+function testingAPI(key,nameR){
+	console.log("test API");
+	httpGet(document.URL.concat("api/upload/downloader"),key,nameR);
+}
+function httpGet(theUrl,key,name)
+{
+	var xmlHttp = new XMLHttpRequest();
+	
+	xmlHttp.open("GET", theUrl, false ); // false for synchronous request
+	xmlHttp.setRequestHeader("cle",key);
+	xmlHttp.send(null);
+	return xmlHttp.responseText;
+}
+</script>
+<form enctype="multipart/form-data" method="POST" action="/api/upload">
+     <input type="file" id="fileUpload" name="file"/>
+     <input type="hidden" id="fileName" name="fileName"/>
+     <input type="submit" value="Upload"/>
+   </form>
+   
+        Cle de decryptage: <input type="password" id="cle" name="cle"/>
+        File name: <input type="text" id="name"  name="name"/> 
+        <input type="submit" id="submitD" onclick="javascript:doClick()">
+        
+     <script type="text/javascript">
+   function doClick(){
+    $.ajax({
+          url: document.URL.concat("api/upload/downloader"),
+          type: 'GET',
+          contentType: 'application/json',
+          headers: {
+                    "cle": $('#cle').val()
+                 },
+          async: false
+            });
+   }
+    </script>
+</body>
+</html>

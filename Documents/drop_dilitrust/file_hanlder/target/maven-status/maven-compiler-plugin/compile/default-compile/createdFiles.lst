@@ -1,0 +1,5 @@
+org\uploader\dilitrust\file_hanlder\health\UploadHealthCheck.class
+org\uploader\dilitrust\file_hanlder\api\Uploaded.class
+org\uploader\dilitrust\file_hanlder\file_handlerConfiguration.class
+org\uploader\dilitrust\file_hanlder\file_handlerApplication.class
+org\uploader\dilitrust\file_hanlder\resources\UploadResource.class
