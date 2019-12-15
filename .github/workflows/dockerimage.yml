@@ -13,7 +13,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Documents/drop_dilitrust/file_hanlder/dockerfile --tag file_handler:$(date +%s)
     - name: Publish Docker
-    - uses: elgohr/Publish-Docker-Github-Action@2.10
+      uses: elgohr/Publish-Docker-Github-Action@2.10
       with:
         # The name of the image you would like to push
         name: file_handler
